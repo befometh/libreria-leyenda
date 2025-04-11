@@ -1,0 +1,30 @@
+main {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 300px 100px auto 100px;
+  grid-template-areas:
+    "cabecero"
+    "nav"
+    "principal"
+    "pie";
+  height: 100vh;
+}
+
+#cabecero {
+  grid-area: cabecero;
+  background-color: red;
+}
+
+#nav {
+  grid-area: nav;
+  background: blue;
+}
+
+#principal {
+  grid-area: principal;
+}
+
+#pie {
+  grid-area: pie;
+  background: green;
+}
