@@ -1,8 +1,6 @@
 <main>
-  <ng-container *ngIf="!pagPrincipal">
-    <app-header id="cabecero"></app-header>
-    <app-nav id="nav"></app-nav>
-  </ng-container>
+    <app-header id="cabecero" [estaActivo]="!pagPrincipal"></app-header>
+    <app-nav id="nav" [estaActivo]="!pagPrincipal"></app-nav>
   <div id="principal">
     <router-outlet></router-outlet>
   </div>

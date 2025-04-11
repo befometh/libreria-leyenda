@@ -1,7 +1,7 @@
 main {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 300px 100px auto 100px;
+  grid-template-rows: fit-content(0vh) fit-content(0vh) auto 100px;
   grid-template-areas:
     "cabecero"
     "nav"
@@ -12,12 +12,11 @@ main {
 
 #cabecero {
   grid-area: cabecero;
-  background-color: red;
 }
 
 #nav {
   grid-area: nav;
-  background: blue;
+  background: #4900f3;
 }
 
 #principal {
@@ -27,4 +26,8 @@ main {
 #pie {
   grid-area: pie;
   background: green;
+}
+
+.oculto {
+  display: none;
 }
