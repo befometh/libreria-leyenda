@@ -14,6 +14,8 @@ ul {
 a{
   color: white;
   text-decoration: none;
+  font-family: var(--content),serif;
+  font-size: 21px;
   margin-inline: 100px;
 
 }

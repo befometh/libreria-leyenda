@@ -25,7 +25,7 @@ main {
 
 #pie {
   grid-area: pie;
-  background: green;
+  background: #a8a8a8;
 }
 
 .oculto {

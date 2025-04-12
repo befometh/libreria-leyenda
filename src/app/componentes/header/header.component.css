@@ -15,8 +15,7 @@ header {
 .logoTitulo p {
   font-family: var(--title), sans-serif;
   color: var(--dorado);
-  font-size: 30px;
-  padding-bottom: 5px;
+  font-size: 40px;
 }
 
 .tarjetaUsuario{

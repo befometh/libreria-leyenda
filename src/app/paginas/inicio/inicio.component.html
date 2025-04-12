@@ -1,1 +1,21 @@
-<p>inicio works!</p>
+<header>
+  <div id="mainTitulo">
+    <div>
+      <a id="imagen" routerLink="inicio"><img src="L.png" alt="logo" width="200" height="250"></a>
+      <p id="titulo">a Leyenda del Libro</p>
+    </div>
+    <p id="slogan">Hacemos que tu imaginación vuele</p>
+  </div>
+  <div id="mainTarjeta">
+    <app-tarjeta-usuario></app-tarjeta-usuario>
+  </div>
+  <nav>
+    <ul>
+      <li><a routerLink="inicio" [routerLinkActive]="'pestActiva'">inicio</a></li>
+      <li><a href="">Quienes Somos</a></li>
+      <li><a href="">Catálogo</a></li>
+      <li><a href="">Disfruta</a></li>
+      <li><a href="">Contacto</a></li>
+    </ul>
+  </nav>
+</header>

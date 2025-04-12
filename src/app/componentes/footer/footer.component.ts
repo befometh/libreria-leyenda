@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
+  // Rutas tomadas de la carpeta /public
+    rutaInstagram: string = "brand-instagram.svg";
+    rutaSnapchat: string = "brand-snapchat.svg";
+    rutaTwitter: string = "brand-x.svg";
+    rutaYoutube: string = "brand-youtube.svg";
 
 }

@@ -1,2 +1,36 @@
 footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
 }
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+
+}
+
+#izquierda li {
+  margin-inline: 100px;
+  width: auto;
+
+}
+
+#derecha li {
+  margin-inline: 20px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-family: var(--content), serif;
+  font-size: 21px;
+}
+
+
