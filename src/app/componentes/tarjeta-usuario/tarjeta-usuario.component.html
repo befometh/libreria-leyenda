@@ -1,0 +1,23 @@
+<div class="cuerpoTarjeta">
+  <ng-container *ngIf="isLogged">
+    <a href="">
+      <div>
+        <img src="{{usuario.rutaIMG}}" alt="foto de usuario" width="60px" height="60px">
+        <p>{{ usuario.nombre }}</p>
+        <p>/</p>
+        <p class="sub">{{ usuario.email }}</p>
+      </div>
+      <p id="cerrarSesion">CERRAR SESIÓN</p>
+    </a>
+  </ng-container>
+  <ng-container *ngIf="!isLogged">
+    <a href="">
+      <div id="iniciarSesionDiv">
+        <p>Inicia Sesión</p><p>/</p>
+        <p>Registrate</p>
+      </div>
+    </a>
+  </ng-container>
+
+</div>
+

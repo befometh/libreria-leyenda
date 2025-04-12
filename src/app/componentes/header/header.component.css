@@ -1,0 +1,28 @@
+header {
+  background: var(--recuadroHeaderGrad);
+  width: 100vw;
+  height: fit-content(0vh);
+  display: flex;
+}
+
+.logoTitulo{
+  display: flex;
+  align-items: end;
+  width: 50%;
+  padding: 10px;
+}
+
+.logoTitulo p {
+  font-family: var(--title), sans-serif;
+  color: var(--dorado);
+  font-size: 30px;
+  padding-bottom: 5px;
+}
+
+.tarjetaUsuario{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 10px;
+  width: 50%;
+}
