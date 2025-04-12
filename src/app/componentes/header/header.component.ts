@@ -15,7 +15,7 @@ import {TarjetaUsuarioComponent} from '../tarjeta-usuario/tarjeta-usuario.compon
   styleUrl: './header.component.css'
 })
 export class HeaderComponent implements OnChanges{
-  @Input() estaActivo!: boolean;
+  @Input() estaActivo!: boolean; //Se trae la información de app.component.ts para confirmar si se encuentra en la pág. INICIO
 
   ngOnChanges(changes: SimpleChanges) {
     console.log(this.estaActivo);

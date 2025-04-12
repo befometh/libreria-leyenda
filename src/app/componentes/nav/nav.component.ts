@@ -1,11 +1,14 @@
 import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {NgIf} from "@angular/common";
+import {RouterLink, RouterLinkActive} from '@angular/router';
 
 @Component({
   selector: 'app-nav',
-    imports: [
-        NgIf
-    ],
+  imports: [
+    NgIf,
+    RouterLinkActive,
+    RouterLink
+  ],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.css'
 })

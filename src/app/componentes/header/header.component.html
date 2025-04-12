@@ -1,9 +1,11 @@
+<!--estaActivo confirma que no se encuentre en la página de inicio-->
 <header *ngIf="estaActivo">
   <div class="logoTitulo">
     <a routerLink="inicio"><img src="L.png" alt="logo" width="100" height="150"></a>
     <p>a Leyenda del Libro</p>
   </div>
   <div class="tarjetaUsuario">
+<!--Carga la información del usuario-->
     <app-tarjeta-usuario></app-tarjeta-usuario>
   </div>
 </header>

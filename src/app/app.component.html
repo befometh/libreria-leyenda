@@ -1,7 +1,10 @@
 <main>
+<!--    estado de pagPrincipal activa y desactiva el menú principal, ya que la página inicio no cuentan con cabecera ni
+        barra de navegación se encuentra todo incluido en el cuerpo de la página inicio-->
     <app-header id="cabecero" [estaActivo]="!pagPrincipal"></app-header>
     <app-nav id="nav" [estaActivo]="!pagPrincipal"></app-nav>
   <div id="principal">
+<!--    Sistema de carga de todas las páginas-->
     <router-outlet></router-outlet>
   </div>
   <app-footer id="pie"></app-footer>

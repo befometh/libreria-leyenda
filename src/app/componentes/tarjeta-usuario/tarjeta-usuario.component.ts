@@ -10,6 +10,7 @@ import {NgIf} from '@angular/common';
   styleUrl: './tarjeta-usuario.component.css'
 })
 export class TarjetaUsuarioComponent {
+  // Inicializando la variable usuario
   usuario = {
     nombre:"",
     email: "",
@@ -17,6 +18,7 @@ export class TarjetaUsuarioComponent {
   };
   isLogged=true;
 
+  // Creador del usuario genérico
   constructor() {
     this.usuario = {
       nombre: "Nombre Apellido",

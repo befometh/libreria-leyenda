@@ -11,6 +11,8 @@ import {FooterComponent} from './componentes/footer/footer.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'La Leyenda del Libro';
+  title = 'La Leyenda del Libro'; //Contenedor del título de la página
+  /*pagPrincipal: Variable que almacena si se encuentra en la página de inicio o no, importante para la visibilidad
+  * del header/nav, (la página de inicio integra ambos dentro de su propio esquema para dar resalte)*/
   pagPrincipal: boolean = false;
 }
