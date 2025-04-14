@@ -14,6 +14,8 @@ import {RouterLink, RouterLinkActive} from '@angular/router';
 })
 export class NavComponent implements OnChanges{
   @Input() estaActivo!: boolean;
+  /*esInicio: Variable que activa y desactiva la barra de inicio en la parte superior, (considerando que la página
+  * principal las tiene integradas en su contenido, para dar resaltado)*/
 
   ngOnChanges(changes: SimpleChanges) {
     console.log(this.estaActivo);

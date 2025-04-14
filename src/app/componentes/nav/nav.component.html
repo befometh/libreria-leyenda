@@ -1,8 +1,8 @@
 <nav *ngIf="estaActivo">
   <ul>
-    <li><a routerLink="inicio" [routerLinkActive]="'pestActiva'">inicio</a></li>
+    <li><a routerLink="inicio" [routerLinkActive]="'pestActiva'" >inicio</a></li>
     <li><a href="">Quienes Somos</a></li>
-    <li><a href="">Catálogo</a></li>
+    <li><a routerLink="catalogo" [routerLinkActive]="'pestActiva'">Catálogo</a></li>
     <li><a href="">Disfruta</a></li>
     <li><a href="">Contacto</a></li>
   </ul>
