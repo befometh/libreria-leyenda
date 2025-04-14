@@ -1,10 +1,10 @@
 section{
   display: flex;
   width: 100vw;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   height: 98%;
   margin: 5px 0;
-  overflow: scroll;
 }
 
 #menu {
@@ -54,4 +54,60 @@ section{
 
 #ordenDiv {
   justify-content: end;
+}
+/*Sliders*/
+#slider1 {
+  width: 80%;
+  height: 300px;
+  padding: 20px;
+  position: relative;
+  background-color: var(--fondo2);
+}
+
+.categoriaDiv {
+  width: 100vw;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 3%;
+  overflow: visible;
+}
+
+#slider1 img{
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  transition: 2s;
+}
+
+#slider1 img:hover{
+  width: 200px;
+  height: 300px;
+  object-fit: contain;
+}
+
+.ss-icon{
+  color: #000;
+  text-decoration: none;
+  font-size: 2rem;
+  position:absolute;
+  top: 35%
+}
+
+.ss-icon:hover{
+  color: #888;
+  cursor: pointer;
+}
+
+.ss-icon#izq{
+  left: 1%;
+}
+
+.ss-icon#der{
+  right: 1%;
+  background-color: white;
 }
