@@ -3,7 +3,8 @@
   --title: 'Brush Script MT';
   --content: Garamond;
   --dorado: #c0a117;
-  --recuadroHeaderGrad: linear-gradient(#D9D9D9,#4900f3)
+  --recuadroHeaderGrad: linear-gradient(#D9D9D9,#4900f3);
+  --fondo2: #D9D9D9;
 }
 
 body {
