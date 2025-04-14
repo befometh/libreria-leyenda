@@ -1,7 +1,7 @@
 <header>
   <div id="mainTitulo">
     <div>
-      <a id="imagen" routerLink="inicio"><img src="L.png" alt="logo" width="200" height="250"></a>
+      <a id="imagen" routerLink="/inicio"><img src="L.png" alt="logo" width="200" height="250"></a>
       <p id="titulo">a Leyenda del Libro</p>
     </div>
     <p id="slogan">Hacemos que tu imaginación vuele</p>
@@ -11,7 +11,7 @@
   </div>
   <nav>
     <ul>
-      <li><a routerLink="inicio" [routerLinkActive]="'pestActiva'">inicio</a></li>
+      <li><a routerLink="/inicio" [routerLinkActive]="'pestActiva'">inicio</a></li>
       <li><a href="">Quienes Somos</a></li>
       <li><a href="">Catálogo</a></li>
       <li><a href="">Disfruta</a></li>
@@ -19,3 +19,22 @@
     </ul>
   </nav>
 </header>
+<section>
+  <h1>Lo más buscado...</h1>
+<!--  https://codepen.io/dudleystorey/pen/DvZjLz-->
+  <base href="catalogo 2.jpg">
+  <div id="carousel">
+    <figure id="spinner">
+      <img src="catalogo 1.jpg" alt>
+      <img src="catalogo 2.jpg" alt>
+      <img src="catalogo 3.jpg" alt>
+      <img src="catalogo 4.jpg" alt>
+      <img src="catalogo 5.jpg" alt>
+      <img src="catalogo 6.jpg" alt>
+      <img src="catalogo 7.jpg" alt>
+      <img src="catalogo 8.jpg" alt>
+    </figure>
+  </div>
+  <span style="float:left" class="ss-icon" (click)="galleryspin(true)">&lt;</span>
+  <span style="float:right" class="ss-icon" (click)="galleryspin(false)">&gt;</span>
+</section>
