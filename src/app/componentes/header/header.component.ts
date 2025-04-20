@@ -18,6 +18,5 @@ export class HeaderComponent implements OnChanges{
   @Input() estaActivo!: boolean; //Se trae la información de app.component.ts para confirmar si se encuentra en la pág. INICIO
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log(this.estaActivo);
   }
 }

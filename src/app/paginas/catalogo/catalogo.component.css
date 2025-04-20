@@ -1,10 +1,28 @@
 section{
   display: flex;
-  width: 100vw;
   flex-direction: column;
+  width: 100vw;
   align-items: center;
-  height: 98%;
+  justify-content: center;
   margin: 5px 0;
+  position: relative;
+}
+
+.mascara{
+  position: absolute;
+  width: 9%;
+  height: 120%;
+  top: 0;
+  background-color: white;
+  z-index: 2;
+}
+
+.mascaraIzq {
+  left: 0;
+}
+
+.mascaraDer {
+  right: 0;
 }
 
 #menu {
@@ -55,39 +73,45 @@ section{
 #ordenDiv {
   justify-content: end;
 }
-/*Sliders*/
-#slider1 {
+
+/*--Sliders--*/
+/*General*/
+
+.slider{
   width: 80%;
-  height: 300px;
+  height: 200px;
   padding: 20px;
   position: relative;
   background-color: var(--fondo2);
 }
 
-.categoriaDiv {
-  width: 100vw;
+.categoriaDiv{
+  width: fit-content;
   height: 150px;
   display: flex;
   align-items: center;
   position: absolute;
   left: 3%;
   overflow: visible;
+  transition: 2s;
 }
 
-#slider1 img{
+
+.slider img{
   width: 150px;
   height: 150px;
-  margin: 10px;
+  margin-inline: 10px;
   object-fit: cover;
   object-position: center;
   border-radius: 10px;
   transition: 2s;
 }
 
-#slider1 img:hover{
+.slider img:hover{
   width: 200px;
   height: 300px;
   object-fit: contain;
+  z-index: 2;
 }
 
 .ss-icon{
@@ -95,19 +119,31 @@ section{
   text-decoration: none;
   font-size: 2rem;
   position:absolute;
-  top: 35%
+  top: 55%;
+  background-color: rgba(169, 169, 169, 0.5);
+  border-radius: 5px;
+  z-index: 3;
+  transition: 2s;
 }
 
 .ss-icon:hover{
   color: #888;
+  font-size: 3rem;
   cursor: pointer;
 }
 
-.ss-icon#izq{
+.izq{
   left: 1%;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 
-.ss-icon#der{
+.der{
   right: 1%;
-  background-color: white;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.desactivado{
+  cursor: not-allowed;
 }

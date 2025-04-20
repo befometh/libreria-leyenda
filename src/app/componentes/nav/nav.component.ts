@@ -18,6 +18,5 @@ export class NavComponent implements OnChanges{
   * principal las tiene integradas en su contenido, para dar resaltado)*/
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log(this.estaActivo);
   }
 }

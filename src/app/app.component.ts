@@ -9,7 +9,7 @@ import {ToggleNavBarService} from './servicios/toggle-nav-bar.service';
   selector: 'app-root',
   imports: [RouterOutlet, NavComponent, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent implements OnInit{
   title = 'La Leyenda del Libro'; //Contenedor del título de la página
@@ -20,13 +20,8 @@ export class AppComponent implements OnInit{
   constructor(private toggle:ToggleNavBarService) {
   }
 
-  tipoPagina(e:any){
-    this.pagPrincipal = e === '1';
-  }
-
   ngOnInit(): void {
     this.leerMensaje()
-    console.log("esto ocurre");
   }
 
   leerMensaje() {

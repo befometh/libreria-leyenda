@@ -15,20 +15,83 @@
       </div>
     </div>
   </article>
-  <article id="slider1">
+  <article class="slider" id="slider1">
     <p>En oferta<br></p>
-      <span class="ss-icon" id="izq">&lt;</span>
-    <div class="categoriaDiv">
-      <img src="{{img1}}" alt="foto" srcset="{{img1}}">
-      <img src="{{img2}}" alt="foto" srcset="{{img2}}">
-      <img src="{{img3}}" alt="foto" srcset="{{img3}}">
-      <img src="{{img4}}" alt="foto" srcset="{{img4}}">
-      <img src="{{img5}}" alt="foto" srcset="{{img5}}">
-      <img src="{{img6}}" alt="foto" srcset="{{img6}}">
-      <img src="{{img7}}" alt="foto" srcset="{{img7}}">
-      <img src="{{img8}}" alt="foto" srcset="{{img8}}">
-      <img src="{{img1}}" alt="foto" srcset="{{img1}}">
+    <span class="ss-icon izq" (click)="funcionBotones(false, 1,3)">&lt;</span>
+    <div class="categoriaDiv" id="categoriaDiv1">
+      <ng-container *ngFor="let libro of productos">
+        @if (libro.oferta) {
+          <a routerLink="/ficha/{{libro.id}}"><img src="{{libro.imagen}}" alt="{{libro.nombre}}"></a>
+        }
+      </ng-container>
     </div>
-      <span class="ss-icon" id="der">&gt;</span>
+    <span class="ss-icon der" (click)="funcionBotones(true, 1,3)">&gt;</span>
   </article>
+
+  <article class="slider" id="slider2">
+    <p>Lo más buscado<br></p>
+    <span class="ss-icon izq" (click)="funcionBotones(false, 2,3)">&lt;</span>
+    <div class="categoriaDiv" id="categoriaDiv2">
+      <ng-container *ngFor="let id of masBuscado">
+        <ng-container *ngIf="{resultado: obtenerProducto(id)} as temp">
+          <a routerLink="/ficha/{{id}}"><img src="{{temp.resultado.imagen}}" alt="{{temp.resultado.nombre}}"></a>
+        </ng-container>
+      </ng-container>
+    </div>
+    <span class="ss-icon der" (click)="funcionBotones(true, 2,3)">&gt;</span>
+  </article>
+
+  <article class="slider" id="slider3">
+    <p>Drama<br></p>
+    <span class="ss-icon izq" (click)="funcionBotones(false, 3,5)">&lt;</span>
+    <div class="categoriaDiv" id="categoriaDiv3">
+      <ng-container *ngFor="let id of drama">
+        <ng-container *ngIf="{resultado: obtenerProducto(id)} as temp">
+          <a routerLink="/ficha/{{id}}"><img src="{{temp.resultado.imagen}}" alt="{{temp.resultado.nombre}}"></a>
+        </ng-container>
+      </ng-container>
+    </div>
+    <span class="ss-icon der" (click)="funcionBotones(true, 3,5)">&gt;</span>
+  </article>
+
+  <article class="slider" id="slider4">
+    <p>Fantasía<br></p>
+    <span class="ss-icon izq" (click)="funcionBotones(false, 4,7)">&lt;</span>
+    <div class="categoriaDiv" id="categoriaDiv4">
+      <ng-container *ngFor="let id of fantasia">
+        <ng-container *ngIf="{resultado: obtenerProducto(id)} as temp">
+          <a routerLink="/ficha/{{id}}"><img src="{{temp.resultado.imagen}}" alt="{{temp.resultado.nombre}}"></a>
+        </ng-container>
+      </ng-container>
+    </div>
+    <span class="ss-icon der" (click)="funcionBotones(true, 4,7)">&gt;</span>
+  </article>
+
+  <article class="slider" id="slider5">
+    <p>Juegos de Rol<br></p>
+    <span class="ss-icon izq" (click)="funcionBotones(false, 5,3)">&lt;</span>
+    <div class="categoriaDiv" id="categoriaDiv5">
+      <ng-container *ngFor="let id of rol">
+        <ng-container *ngIf="{resultado: obtenerProducto(id)} as temp">
+          <a routerLink="/ficha/{{id}}"><img src="{{temp.resultado.imagen}}" alt="{{temp.resultado.nombre}}"></a>
+        </ng-container>
+      </ng-container>
+    </div>
+    <span class="ss-icon der" (click)="funcionBotones(true, 5,3)">&gt;</span>
+  </article>
+
+  <article class="slider" id="slider6">
+    <p>Catalogo más reciente<br></p>
+    <span class="ss-icon izq" (click)="funcionBotones(false, 6,11)">&lt;</span>
+    <div class="categoriaDiv" id="categoriaDiv6">
+      <ng-container *ngFor="let producto of productos">
+        <a routerLink="/ficha/{{producto.id}}"><img src="{{producto.imagen}}" alt="{{producto.nombre}}"></a>
+      </ng-container>
+    </div>
+    <span class="ss-icon der" (click)="funcionBotones(true, 6,11)">&gt;</span>
+  </article>
+
+  <!--  Máscaras: Impiden que se vea los libros por fuera de su contenedor-->
+  <div class="mascaraIzq mascara"></div>
+  <div class="mascaraDer mascara"></div>
 </section>

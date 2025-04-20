@@ -11,12 +11,16 @@ main {
 }
 
 #cabecero {
+  z-index: 4;
   grid-area: cabecero;
 }
 
 #nav {
   grid-area: nav;
   background: #4900f3;
+  position: sticky;
+  top: 0;
+  z-index: 4;;
 }
 
 #principal {
@@ -26,6 +30,11 @@ main {
 #pie {
   grid-area: pie;
   background: #a8a8a8;
+  position: fixed;
+  width: 100vw;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
 }
 
 .oculto {
