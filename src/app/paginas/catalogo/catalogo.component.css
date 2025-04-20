@@ -83,6 +83,7 @@ section{
   padding: 20px;
   position: relative;
   background-color: var(--fondo2);
+  overflow: visible;
 }
 
 .categoriaDiv{
@@ -111,7 +112,7 @@ section{
   width: 200px;
   height: 300px;
   object-fit: contain;
-  z-index: 2;
+  z-index: 3;
 }
 
 .ss-icon{
@@ -122,7 +123,7 @@ section{
   top: 55%;
   background-color: rgba(169, 169, 169, 0.5);
   border-radius: 5px;
-  z-index: 3;
+  z-index: 4;
   transition: 2s;
 }
 

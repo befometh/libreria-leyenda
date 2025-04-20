@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterContentInit, AfterViewInit, Component, OnInit} from '@angular/core';
 import {ProductosService} from '../../servicios/productos/productos.service';
 import {NgForOf, NgIf} from '@angular/common';
 import {RouterLink} from '@angular/router';
@@ -13,7 +13,7 @@ import {RouterLink} from '@angular/router';
   templateUrl: './catalogo.component.html',
   styleUrl: './catalogo.component.css'
 })
-export class CatalogoComponent implements OnInit, AfterViewInit {
+export class CatalogoComponent implements OnInit, AfterViewInit, AfterContentInit {
   buscar: string = "buscar.svg";
   filtrar: string = "filtrar.svg";
   ordenar: string = "ordenar.svg";
@@ -40,17 +40,16 @@ export class CatalogoComponent implements OnInit, AfterViewInit {
         },
         error: (err) => console.log("No ha sido posible insertar el valor esperado, código de error: ", err)
       }
-    );    this.conn.obtenerProductos().subscribe({
-        next: (res: any) => {
-          this.productos = res.productos
-        },
-        error: (err) => console.log("No ha sido posible insertar el valor esperado, código de error: ", err)
-      }
     );
+  }
+
+  ngAfterContentInit(): void {
+
   }
 
   ngAfterViewInit(): void {
   }
+
 
   funcionBotones(valor: boolean, categoria: number, lugares: number) {
     this.catalogoDiv = document.querySelector(`#categoriaDiv${categoria}`);
@@ -84,5 +83,20 @@ export class CatalogoComponent implements OnInit, AfterViewInit {
     return producto;
   }
 
+  buscarOfertas(){
+    let productosOfertados: any[]=[];
+    for(let elem of this.productos){
+      if(elem.oferta){
+        productosOfertados.push(elem);
+      }
+    }
+    return productosOfertados;
+  }
 
+  listarProductos(){
+    let todos = [];
+    for(let elem of this.productos)
+      todos.push(elem);
+    return todos;
+  }
 }

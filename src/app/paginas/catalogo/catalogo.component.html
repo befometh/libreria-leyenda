@@ -19,10 +19,12 @@
     <p>En oferta<br></p>
     <span class="ss-icon izq" (click)="funcionBotones(false, 1,3)">&lt;</span>
     <div class="categoriaDiv" id="categoriaDiv1">
-      <ng-container *ngFor="let libro of productos">
-        @if (libro.oferta) {
-          <a routerLink="/ficha/{{libro.id}}"><img src="{{libro.imagen}}" alt="{{libro.nombre}}"></a>
-        }
+      <ng-container *ngIf="{resultado:buscarOfertas()} as temp">
+        <ng-container *ngFor="let producto of temp.resultado">
+          @if (producto.oferta) {
+            <a routerLink="/ficha/{{producto.id}}"><img src="{{producto.imagen}}" alt="{{producto.nombre}}"></a>
+          }
+        </ng-container>
       </ng-container>
     </div>
     <span class="ss-icon der" (click)="funcionBotones(true, 1,3)">&gt;</span>
@@ -84,8 +86,10 @@
     <p>Catalogo más reciente<br></p>
     <span class="ss-icon izq" (click)="funcionBotones(false, 6,11)">&lt;</span>
     <div class="categoriaDiv" id="categoriaDiv6">
-      <ng-container *ngFor="let producto of productos">
-        <a routerLink="/ficha/{{producto.id}}"><img src="{{producto.imagen}}" alt="{{producto.nombre}}"></a>
+      <ng-container *ngIf="{resultado:listarProductos()} as temp">
+        <ng-container *ngFor="let producto of temp.resultado">
+          <a routerLink="/ficha/{{producto.id}}"><img src="{{producto.imagen}}" alt="{{producto.nombre}}"></a>
+        </ng-container>
       </ng-container>
     </div>
     <span class="ss-icon der" (click)="funcionBotones(true, 6,11)">&gt;</span>

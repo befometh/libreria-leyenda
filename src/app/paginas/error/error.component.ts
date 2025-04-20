@@ -1,3 +1,4 @@
+//Componente encargado de mostrarse si se anota de manera  errada una dirección de ruta en el sitio web.
 import { Component } from '@angular/core';
 
 @Component({
