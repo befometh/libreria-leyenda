@@ -1,0 +1,23 @@
+<div id="contPrincipal">
+  <section>
+    <div id="contImagen">
+      <img src="{{producto.imagen}}" alt="{{producto.nombre}}" srcset="{{producto.imagen}}">
+    </div>
+    <div id="contLeyenda">
+      <h1>{{ producto.nombre }}</h1>
+      <div id="conPrecio">
+        <span id="precio">{{ producto.precio }}</span>
+        @if (producto.oferta) {
+          <div id="promocion">
+            <span>En oferta</span>
+          </div>
+        }
+      </div>
+      <p>{{ producto.descripcion }}</p>
+      <div id="contBotones">
+        <button>Comprar</button>
+        <button><img src="{{corazon}}" alt="Añadir al carrito" srcset="{{corazon}}" width="24px" height="24px"></button>
+      </div>
+    </div>
+  </section>
+</div>
