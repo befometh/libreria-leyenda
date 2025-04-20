@@ -8,6 +8,6 @@ import {provideHttpClient} from '@angular/common/http';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(withEventReplay()),
-    provideHttpClient()
+    provideHttpClient() // //Se importa la librería requerida para que funcione la comunicación con la DB
   ]
 };

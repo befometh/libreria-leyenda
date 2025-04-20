@@ -9,6 +9,7 @@ export const routes: Routes = [
   {path:"inicio", component:InicioComponent},
   {path:"", redirectTo:"inicio", pathMatch:"full"},
   {path:"catalogo", component:CatalogoComponent},
+  //Producto: de tipo renderizadorResolver, garantiza que la página tenga los datos requeridos antes de abrirse
   {path:"ficha/:id", component:FichaComponent, resolve: {producto:renderizadorResolver}},
-  {path:"**", component:ErrorComponent}
+  {path:"**", component:ErrorComponent} //Si se entrega un enlace fallido
 ];
